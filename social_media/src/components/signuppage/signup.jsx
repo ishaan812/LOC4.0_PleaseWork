@@ -4,6 +4,7 @@ import React from 'react';
 const Form = () => {
   return (
     <div className='signup'>
+        <img src='https://cdn-icons-png.flaticon.com/512/149/149071.png' alt='logo'/>
         <br></br>
         <form className='form'>
             <label>NAME: </label>
