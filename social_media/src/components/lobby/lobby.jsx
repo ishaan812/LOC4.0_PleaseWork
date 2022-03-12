@@ -1,28 +1,28 @@
-import axios from 'axios';
-import React,{useState} from 'react';
+// import axios from 'axios';
+import React,{ useState} from 'react';
 import {Link} from 'react-router-dom'
-import { ImInstagram } from 'react-icons/im';
+import { AiFillInstagram } from 'react-icons/ai';
+import './lobby.scss'
 
-const Lobby = () => {
+const Signin = () => {
   const [EmailID,SetEmailID]=useState('');
   const [Password,SetPassword]=useState('');
-  const [InstagramAuthenticated,SetAuthenticated]=useState(0);
+
  
-  const InstagramAuthentication=(e)=>{
-        e.preventDefault();
-        SetAuthenticated(!InstagramAuthenticated);
-        console.log(InstagramAuthenticated);
 
-  }
+  const InstaAuth = (event) => {
+    event.preventDefault();
+    console.log("1");
 
+}
   
   
   return (
-    <div className="lobby">
-        <button className='button' onClick={e=>InstagramAuthentication(e)}><ImInstagram size={400}/></button>
-        <Link to="/" className='button'><button className='back'>GO BACK</button></Link>
+    <div className='lobby'>
+        <div className="insta" onClick={event => InstaAuth(event)}><AiFillInstagram size={300}/></div>
+        <Link to="/"><button className='back'>Go Back</button></Link>
     </div>
   )
 }
 
-export default Lobby
+export default Signin
