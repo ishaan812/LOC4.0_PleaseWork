@@ -1,5 +1,5 @@
 import React from 'react';
-import './signup.scss';
+
 
 const Form = () => {
   return (
