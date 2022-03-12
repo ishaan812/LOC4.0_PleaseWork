@@ -5,28 +5,34 @@ import './signup.css'
 const Form = () => {
   return (
     <div className='signup'>
-        <img src='https://cdn-icons-png.flaticon.com/512/149/149071.png' alt='logo'/>
+        
         <br></br>
-        <form className='form'>
-            <label>NAME: </label>
-            <input type='text'/>
-            
+        <table className='form'>
+        <tr><td colSpan={2}><img id='image' src='https://cdn-icons-png.flaticon.com/512/149/149071.png' alt='logo'/></td></tr>
+        <br></br>
+        <br></br>
+        <tr><td>NAME: </td>
+            <td ><input type='text' /></td>
+            </tr>
             <br></br>
             <br></br>
-            <label>EMAIL-ID: </label>
-            <input type='text' />
+            <tr><td>EMAIL-ID: </td>
+            <td><input type='text' /></td>
+            </tr>
             <br></br>
             <br></br>
-            <label>PASSWORD: </label>
-            <input type='text' />
+            <tr><td>PASSWORD: </td>
+            <td><input type='text' /></td>
+            </tr>
             <br></br>
             <br></br>
-            <label>CONFIRM PASSWORD: </label>
-            <input type='text' />
+            <tr><td>CONFIRM-PASSWORD: </td>
+            <td><input type='text' /></td>
+            </tr>
             <br></br>
             <br></br>
-            <button className='but'> SIGN UP </button>
-        </form>
+            <tr><td colSpan={2}><button className='but'> SIGN UP </button></td></tr>
+        </table>
     
     </div>
   )
