@@ -2,16 +2,22 @@
     background: #7F7FD5;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    width: 100vw;
-    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
     display: flex;
+    
 
     .left{
-        background: black;
+        background: transparent;
         flex:0.5;
+        overflow: hidden;
         display: flex;
         flex-direction: column;
+        margin: auto;
+        align-items: center;
+        .row{
+            
         .form{
             .label{
                 font-size:32px;
@@ -19,11 +25,12 @@
             .input{
                 width:100%;
             }
-        }
+        }}
     }
 
     .right{
         flex:0.5;
+        overflow: hidden;
     }
 
 
