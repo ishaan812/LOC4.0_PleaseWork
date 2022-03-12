@@ -17,7 +17,26 @@ router.route('/add').post((req,res) => {
     NewUser.save()
         .then(() => res.json("User Added"))
         .catch(err => res.status(400).json('Error: '+ err))
-
 });
+
+
+router.post('/login').post((req, res) => {
+    const emailid= req.body.emailid;
+    const password= req.body.password;
+    const user = User.findOne({ emailid: emailid })
+    if(user)
+    {
+        const result= bcrypt.compare(password,user.password);
+        if(result)
+        {
+            res.json({"Logged in": 1});
+        }   
+        else{
+            res.json({"Logged in": 0});
+        }
+    }
+    else{res.json({"Logged in" : -1})}
+    
+})
 
 module.exports=router;

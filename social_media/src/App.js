@@ -1,6 +1,6 @@
 import Signup from './components/signuppage/signup.jsx';
 import Landing from './components/landing/landing.jsx';
-import FormPage from './components/signin.jsx';
+import Signin from './components/signin/signin.jsx';
 
 
 import {BrowserRouter as Router,Route,Routes} from "react-router-dom"
@@ -12,7 +12,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/signup" exact element={<Signup/>} />
-          <Route path="/signin" exact element={<FormPage/>} />
+          <Route path="/signin" exact element={<Signin/>} />
           <Route path="/" exact element={<Landing/>} /> 
         </Routes>
       </Router>
