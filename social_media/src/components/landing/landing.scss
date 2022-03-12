@@ -1,35 +1,46 @@
+
 .landing{
-    background: #7F7FD5;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     overflow: hidden;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding:0;
     display: flex;
+    overflow: hidden;
+    
     
 
     .left{
-        background: transparent;
         flex:0.5;
+        width:100%;
+        background: (0,0,0,0.6);
+        left:100%;
+        padding:0;
+        margin:0;
         overflow: hidden;
         display: flex;
         flex-direction: column;
         margin: auto;
         align-items: center;
-        .row{
-            
-        .form{
-            .label{
-                font-size:32px;
+        .wrapper{
+            display: flex;
+            width:50%;
+            flex-direction: column;
+            .button{
+                width:25%;
             }
-            .input{
-                width:100%;
-            }
-        }}
+        }
+
+
+        
     }
 
     .right{
         flex:0.5;
+        padding:0;
+        margin:0;
+        width:100%;
+        height:100%;
         overflow: hidden;
     }
 
