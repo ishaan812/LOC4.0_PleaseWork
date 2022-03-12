@@ -1,30 +1,29 @@
-import React from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBBtn } from 'mdbreact';
+import React from 'react'
+import './signin.css'
 
-const FormPage = () => {
-return (
-<MDBContainer>
-  <MDBRow>
-    <MDBCol md="6">
-      <form>
-        <p className="h4 text-center mb-4">Sign in</p>
-        <label htmlFor="defaultFormLoginEmailEx" className="grey-text">
-          Your email
-        </label>
-        <input type="email" id="defaultFormLoginEmailEx" className="form-control" />
-        <br />
-        <label htmlFor="defaultFormLoginPasswordEx" className="grey-text">
-          Your password
-        </label>
-        <input type="password" id="defaultFormLoginPasswordEx" className="form-control" />
-        <div className="text-center mt-4">
-          <MDBBtn color="indigo" type="submit">Login</MDBBtn>
-        </div>
-      </form>
-    </MDBCol>
-  </MDBRow>
-</MDBContainer>
-);
-};
+const signin = () => {
+  return (
+    <div className='signin'>
+        
+        <br></br>
+        <table className='form'>
+        <tr><td colSpan={2}><img id='image' src='https://cdn-icons-png.flaticon.com/512/149/149071.png' alt='logo'/></td></tr>
+        <br></br>
+        <br></br>
+        <tr><td>EMAIL-ID: </td>
+            <td ><input type='text' /></td>
+            </tr>
+            <br></br>
+            <br></br>
+            <tr><td>PASSWORD: </td>
+            <td><input type='text' /></td>
+            </tr>
+            <br></br>
+            <br></br>
+            <tr><td colSpan={2}><button className='but'> SIGN IN </button></td></tr>
+        </table>
+    </div>
+  )
+}
 
-export default FormPage;
+export default signin
