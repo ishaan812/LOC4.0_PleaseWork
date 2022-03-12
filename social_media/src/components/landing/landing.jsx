@@ -13,7 +13,7 @@ export default function landing() {
           <div className="middle">
             <div className="middlewrap">
               <div className="name">Stalkr</div>
-              <div className="description">Social Media Analytics for the ultimate influencer</div>
+              <div className="description">Social Media Analytics for the Ultimate Influencer</div>
             </div>
             <div className="buttons">
               <Link to="/signin"><button className='btn'>Login</button></Link>

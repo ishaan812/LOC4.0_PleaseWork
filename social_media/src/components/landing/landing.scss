@@ -71,7 +71,7 @@ body{
                     transition: all .3s;
                     position: relative;
                     overflow: hidden;
-                    
+                    cursor: pointer;
                     z-index: 1;
                     &:after {
                       content: '';
