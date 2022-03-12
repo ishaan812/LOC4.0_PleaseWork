@@ -16,10 +16,10 @@ const Signin = () => {
         {
           "emailid": EmailID,
           "password": Password
-        }.then(console.log("FUCK YES")));
+        }.then(window.location.replace("http://localhost:3000/lobby"))
     
     
-  }
+    )}
   
   
   return (

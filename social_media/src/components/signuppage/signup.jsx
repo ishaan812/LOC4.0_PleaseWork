@@ -18,8 +18,8 @@ const Form = () => {
           "name": Name,
           "emailid": EmailID,
           "password": Password
-        });
-  }
+        }.then(window.location.replace("http://localhost:3000/signin"))
+    )}
 
   return (
     <div className='signup'>
@@ -51,7 +51,8 @@ const Form = () => {
             <br></br>
             <tr><td colSpan={2}><button className='butt' onClick={e=>submit(e)}> SIGN UP </button></td></tr>
         </table>
-        <Link to="/"><button className='backk'>GO BACK</button></Link>
+        <Link to="/"><button className='back'>GO BACK</button></Link>
+        
     
     </div>
   )
