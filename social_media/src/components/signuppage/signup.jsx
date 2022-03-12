@@ -29,23 +29,23 @@ const Form = () => {
         <tr><td colSpan={2}><img id='image' src='https://cdn-icons-png.flaticon.com/512/149/149071.png' alt='logo'/></td></tr>
         <br></br>
         <br></br>
-        <tr><td>NAME: </td>
-            <td ><input type='text' value={Name} onChange={event=>SetName(event.target.value)} /></td>
+        <tr><td>Name </td>
+            <td ><input className='inputtext' type='text' value={Name} onChange={event=>SetName(event.target.value)} /></td>
             </tr>
             <br></br>
             <br></br>
-            <tr><td>EMAIL-ID: </td>
-            <td><input type='email' value={EmailID} onChange={event=>SetEmailID(event.target.value)} /></td>
+            <tr><td>Email-id </td>
+            <td><input  className='inputtext' type='email' value={EmailID} onChange={event=>SetEmailID(event.target.value)} /></td>
             </tr>
             <br></br>
             <br></br>
-            <tr><td>PASSWORD: </td>
-            <td><input type='password' value={Password} onChange={event=>SetPassword(event.target.value)} /></td>
+            <tr><td>Password </td>
+            <td><input className='inputtext' type='password' value={Password} onChange={event=>SetPassword(event.target.value)} /></td>
             </tr>
             <br></br>
             <br></br>
-            <tr><td>CONFIRM-PASSWORD: </td>
-            <td><input type='password' value={ConfirmPassword} onChange={event=>SetConfirmPassword(event.target.value)} /></td>
+            <tr ><td >Confirm-password </td>
+            <td><input className='inputtext' type='password' value={ConfirmPassword} onChange={event=>SetConfirmPassword(event.target.value)} /></td>
             </tr>
             <br></br>
             <br></br>
