@@ -1,33 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+
+body{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
 .landing{
-    width:100vh;
-    height:auto;
+    width:100vw;
+    padding: 10px;
+    height: auto;    
     display: flex;
+    margin: auto;
     align-items: center;
     text-align: center;
-    padding-right: 50px !important;
-    margin-top: 250px;
+    font-family: 'Lora',   serif;
+    background: transparent;
+    
+    
+	
+
+
+
+    
+    
     // background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg");
     // background-repeat: no-repeat;
     // background-size: 1000px;
-}
-    
-    
-    .btn{
+    .page{
+        background: transparent;
+        
+        .wrapper{
+            display: flex;
+            flex-direction: row;
+            width:100vw;
+            background: transparent;
+            height:auto;
+            
+        
+    .left{
         flex:0.25;
-        width:100vh;
-        cursor: pointer;
-        padding: 40px 40px ;
-        font-size: 50px;
-        margin-right: 50px;
-        text-align: center;
-        align-items: center ;
+        display:flex;
+        background: transparent;
     }
 
-    button:hover{
-        background: #7F7FD5;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); 
-    }
-
-
+    .middle{
+        flex: 0.5;
+        display:flex;
+        flex-direction: column ;
+        margin-top: 15%;
+        background: transparent;
+        .middlewrap{
+            
+            border-radius: 200px;
+        .name{
+            font-size: 150px;
+            
+            background: transparent;
     
+        }
+        .description{
+            margin-top: 10px;
+            font-size:36px;
+            background: transparent;
+            font-family: 'League Spartan', sans-serif;
+        }}
+        .buttons{
+            margin-top:150px;
+            .btn{
+                margin-left: 10px;
+                flex:0.25;
+                width:25%;
+                cursor: pointer;
+                font-size: 50px;
+                text-align: center;
+                align-items: center ;
+                font-family: 'League Spartan', sans-serif;
+            }
+        
+            button:hover{
+                background: #7F7FD5;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); 
+            }
+        }
+    }
+
+    .right{
+        flex:0.25;
+        display:flex;
+        background: transparent;
+    }
+    
+    
+    
+
+    }}
+}
+ 
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}}
+}
