@@ -1,26 +1,43 @@
 // import axios from 'axios';
 import React,{ useState} from 'react';
 import {Link} from 'react-router-dom'
-import { AiFillInstagram } from 'react-icons/ai';
+import { AiFillInstagram, AiFillFacebook } from 'react-icons/ai';
 import './lobby.scss'
 
 const Signin = () => {
-  const [EmailID,SetEmailID]=useState('');
-  const [Password,SetPassword]=useState('');
+  const [InstaAuth,SetInstaAuth]=useState(false);
+  const [FaceAuth,SetFaceAuth]=useState(false);
+
 
  
 
-  const InstaAuth = (event) => {
+  const InstagramAuth = (event) => {
     event.preventDefault();
-    console.log("1");
+    SetInstaAuth(true);
+    }
 
-}
+ const FacebookAuth =(event)=>{
+     event.preventDefault();
+     SetFaceAuth(true);
+ }
   
   
   return (
     <div className='lobby'>
-        <div className="insta" onClick={event => InstaAuth(event)}><AiFillInstagram size={300}/></div>
-        <Link to="/"><button className='back'>Go Back</button></Link>
+        <div className="left">
+            <div className="insta" onClick={event => InstagramAuth(event)}>
+                <AiFillInstagram size={300}/>
+            </div>
+            <label className="instalabel">Instagram Authenticated : {InstaAuth ? "True" : "False"} </label>
+            
+        </div>
+        <div className="right">
+            <div className="face" onClick={event => FacebookAuth(event)}><AiFillFacebook size={300}/></div>
+            <label className="facelabel">Facebook Authenticated: {FaceAuth ? "True" : "False"} </label>
+        </div>
+        
+        
+        
     </div>
   )
 }

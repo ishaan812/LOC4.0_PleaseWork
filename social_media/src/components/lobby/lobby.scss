@@ -1,5 +1,18 @@
 .lobby{
-    width: 100vw;
-    background: transparent;
-    height: auto;
+    width:100vw;
+    height:auto;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    .left{
+        flex:0.5;
+        display:flex;
+        flex-direction: column;
+    }
+
+    .right{
+        flex:0.5;
+        display:flex;
+        flex-direction: column;
+    }
 }

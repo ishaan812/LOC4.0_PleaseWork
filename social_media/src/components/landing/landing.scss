@@ -55,6 +55,10 @@ body{
             font-size:36px;
             background: transparent;
             font-family: 'League Spartan', sans-serif;
+            .ityped-cursor {
+                font-size: 2.2rem;
+                opacity: 0;
+            }
         }}
         .buttons{
             flex: 0.3;
