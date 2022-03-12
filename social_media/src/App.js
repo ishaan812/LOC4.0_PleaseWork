@@ -1,6 +1,6 @@
 import Signup from './components/signuppage/signup.jsx';
 
-import Landing from './components/landing/landing.jsx';
+// import Landing from './components/landing/landing.jsx';
 import {BrowserRouter as Router,Route,Routes} from "react-router-dom"
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/signup" exact element={<Signup/>} />
-          <Route path="/" exact element={<Landing/>} />
+          {/* <Route path="/" exact element={<Landing/>} /> */}
         </Routes>
       </Router>
     </div>
