@@ -1,6 +1,16 @@
 const express= require('express');
 const cors= require('cors');
 const mongoose= require('mongoose');
+const Instagram= require('passport-instagram');
+const passport= require('passport');
+
+passport.use(new InstagramStrategy({
+    clientID: "1963046707216916",
+    clientSecret: "8a3aa5d6340a42c2f2c756b3e3cfe43f",
+    callbackURL: "http://localhost:3000/auth/instagram/callback"
+  }, (accessToken, refreshToken, profile, done) => {
+    done(null, profile)
+  }))
 
 require('dotenv').config();
 

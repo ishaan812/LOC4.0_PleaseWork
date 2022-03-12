@@ -3,6 +3,20 @@ const User =  require('../models/user.model');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
+passport.use(new InstagramStrategy({
+    clientID: "1963046707216916",
+    clientSecret: "8a3aa5d6340a42c2f2c756b3e3cfe43f",
+    callbackURL: "http://localhost:3000/auth/instagram/callback"
+  }, (accessToken, refreshToken, profile, done) => {
+      let user = {};
+      user.name = profile.displayName;
+      user.homePage = profile._json.data.website;
+      user.image = profile._json.data.profile_picture;
+      user.bio = profile._json.data.bio;
+      user.media = `https://api.instagram.com/v1/users/${profile.id}/media/recent/?access_token=${accessToken}&count=8`
+  
+      done(null, user)})); 
+
 router.route('/').get((req,res) => {
     User.find()
         .then(users=> res.json(users))
@@ -50,4 +64,23 @@ router.post("/login", async (req, res) => {
   }
 });
 
-module.exports=router;
+app.get('/auth/instagram', passport.authenticate('instagram'))
+
+app.get('/auth/instagram/callback', passport.authenticate('instagram', {
+    successRedirect: '/users',
+    failure: '/'
+  }))
+
+  app.get('/users', (req, res) => {
+    axios.get(req.user.media)
+    .then(function (response) {
+      const data = response.data.data;
+      let user = req.user;
+      user.images = data.map(img => img.images);
+      res.render('instagram', user)  
+    })
+  })
+
+
+ 
+module.exports=router

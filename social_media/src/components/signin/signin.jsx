@@ -15,7 +15,7 @@ const Signin = () => {
         {
           "emailid": EmailID,
           "password": Password
-        });
+        }.then(console.log("FUCK YES")));
     
     
   }
