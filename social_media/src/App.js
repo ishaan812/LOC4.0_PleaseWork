@@ -1,13 +1,11 @@
-
-import Form from './Form';
-import Login from './Login';
+import Signup from './components/signuppage/signup.jsx';
+import Landing from './components/landing/landing.jsx';
 
 function App() {
   return (
     <div >
-      <h1> HI! PLEASE SIGNUP</h1>
-      <Form  />
-      <Login />
+      <Signup />
+      
     </div>
   );
 }
