@@ -48,17 +48,18 @@ body{
       height:150px;
   }
   
-  .but{
+  .butt{
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
     width:25%;
     background-color: black;
-    opacity:0.5;
+    opacity:0.3;
     color: white;
     padding-top: 5px;
     padding-bottom: 5px;
     font-weight: bold;
+    cursor: pointer;
   }
   
   .signup{
@@ -78,6 +79,7 @@ body{
     color: white;
     font-weight: bold;
     cursor: pointer;
+    width: 7%
   }
 
   .inputtext{
