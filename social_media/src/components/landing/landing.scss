@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Sigmar+One&display=swap');
 
 body{
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -15,17 +16,6 @@ body{
     text-align: center;
     font-family: 'Lora',   serif;
     background: transparent;
-    
-    
-	
-
-
-
-    
-    
-    // background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg");
-    // background-repeat: no-repeat;
-    // background-size: 1000px;
     .page{
         background: transparent;
         
@@ -47,41 +37,84 @@ body{
         flex: 0.5;
         display:flex;
         flex-direction: column ;
-        margin-top: 15%;
+        margin-top: 10%;
         background: transparent;
         .middlewrap{
-            
-            border-radius: 200px;
+            flex: 0.7;
         .name{
             font-size: 150px;
-            
+            font-family: 'Sigmar One', cursive;
             background: transparent;
     
         }
         .description{
-            margin-top: 10px;
+            margin-top: 5px;
             font-size:36px;
             background: transparent;
             font-family: 'League Spartan', sans-serif;
         }}
         .buttons{
-            margin-top:150px;
+            flex: 0.3;
+            margin-top:100px;
+            
             .btn{
-                margin-left: 10px;
-                flex:0.25;
-                width:25%;
-                cursor: pointer;
-                font-size: 50px;
-                text-align: center;
-                align-items: center ;
                 font-family: 'League Spartan', sans-serif;
+                margin-left: 50px;
+                color: white;
+                display: inline-block;
+                font-weight: bold;
+                font-size:60px;
+                    padding: 25px 75px;
+                    border-radius: 10rem;
+                    font-size: 1rem;
+                    letter-spacing: .15rem;
+                    transition: all .3s;
+                    position: relative;
+                    overflow: hidden;
+                    
+                    z-index: 1;
+                    &:after {
+                      content: '';
+                      position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      background-color: #28282B;
+                      border-radius: 10rem;
+                      z-index: -2;
+                    }
+                    &:before {
+                      content: '';
+                      position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      width: 0%;
+                      height: 100%;
+                      background-color: darken(#28282B, 15%);
+                      transition: all .3s;
+                      z-index: -1;
+                    }
+                    &:hover {
+                      &:before {
+                        width: 100%;
+                      }        
+                    }
+                // margin-left: 10px;
+                // flex:0.25;
+                // width:25%;
+                // cursor: pointer;
+                // font-size: 50px;
+                // text-align: center;
+                // align-items: center ;
+                // font-family: 'League Spartan', sans-serif;
             }
         
-            button:hover{
-                background: #7F7FD5;  /* fallback for old browsers */
-                background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
-                background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); 
-            }
+            // button:hover{
+            //     background: #7F7FD5;  /* fallback for old browsers */
+            //     background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+            //     background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); 
+            // }
         }
     }
 
@@ -109,3 +142,6 @@ body{
 		background-position: 0% 50%;
 	}}
 }
+
+
+                  

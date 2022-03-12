@@ -19,24 +19,32 @@ router.route('/add').post((req,res) => {
         .catch(err => res.status(400).json('Error: '+ err))
 });
 
-
-router.post('/login').post((req, res) => {
-    const emailid= req.body.emailid;
-    const password= req.body.password;
-    const user = User.findOne({ emailid: emailid })
-    if(user)
-    {
-        const result= bcrypt.compare(password,user.password);
-        if(result)
-        {
-            res.json({"Logged in": 1});
-        }   
-        else{
-            res.json({"Logged in": 0});
-        }
-    }
-    else{res.json({"Logged in" : -1})}
-    
+router.route('/:email').get((req,res)=>{
+    User.findbyemail({"email" : req.params.id},"password", function(err,users){
+        if(err) return handleError(err)})
+        .then(users=>res.json)
+        .catch(err=> res.status(400).json('Error: '+ err))
+        
+    ;
 })
+
+router.post("/login", async (req, res) => {
+  try {
+    const user = await User.findOne({ username: req.body.username });
+    if (user) {
+      const result = await bcrypt.compare(req.body.password, user.password);
+      if (result) {
+        const token = await jwt.sign({ username: user.username }, SECRET);
+        res.json({ token });
+      } else {
+        res.status(400).json({ error: "password doesn't match" });
+      }
+    } else {
+      res.status(400).json({ error: "User doesn't exist" });
+    }
+  } catch (error) {
+    res.status(400).json({ error });
+  }
+});
 
 module.exports=router;
