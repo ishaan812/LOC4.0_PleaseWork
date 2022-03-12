@@ -1,6 +1,8 @@
-import axios from 'axios';
-import React,{ useState, useEffect} from 'react';
+// import axios from 'axios';
+import React,{ useState} from 'react';
 import {Link} from 'react-router-dom'
+import { AiFillInstagram } from 'react-icons/ai';
+import './lobby.scss'
 
 const Signin = () => {
   const [EmailID,SetEmailID]=useState('');
@@ -8,18 +10,17 @@ const Signin = () => {
 
  
 
-  const submit = (e) => {
-    e.preventDefault();
-    
-    
-    
-  }
+  const InstaAuth = (event) => {
+    event.preventDefault();
+    console.log("1");
+
+}
   
   
   return (
-    <div className='signin'>
-        <button className='button' onClick={e=>submit(e)}> Login through Instagram </button>
-        <Link to="/"><button className='back'>GO BACK</button></Link>
+    <div className='lobby'>
+        <div className="insta" onClick={event => InstaAuth(event)}><AiFillInstagram size={300}/></div>
+        <Link to="/"><button className='back'>Go Back</button></Link>
     </div>
   )
 }
