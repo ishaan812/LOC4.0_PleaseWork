@@ -1,8 +1,7 @@
 import Signup from './components/signuppage/signup.jsx';
 import Landing from './components/landing/landing.jsx';
 import Signin from './components/signin/signin.jsx';
-
-
+import Lobby from './components/lobby/lobby.jsx'
 import {BrowserRouter as Router,Route,Routes} from "react-router-dom"
 import './App.css'
 
@@ -12,6 +11,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/signup" exact element={<Signup/>} />
+          <Route path="/lobby" exact element={<Lobby />} />
           <Route path="/signin" exact element={<Signin/>} />
           <Route path="/" exact element={<Landing/>} /> 
         </Routes>
