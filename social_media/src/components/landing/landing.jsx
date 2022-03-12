@@ -5,8 +5,8 @@ import {Link} from "react-router-dom";
 export default function landing() {
   return (
     <div className="landing">
-        <Link to="/signin"><button>Login</button></Link>
-        <Link to="/signup"><button>Signup</button></Link>
+        <Link to="/signin"><button className='btn'>Login</button></Link>
+        <Link to="/signup"><button className='btn'>Signup</button></Link>
     </div>            
   )
 }

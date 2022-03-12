@@ -1,5 +1,6 @@
 import React from 'react'
 import './signin.css'
+import {Link } from 'react-router-dom'
 
 const signin = () => {
   return (
@@ -22,6 +23,7 @@ const signin = () => {
             <br></br>
             <tr><td colSpan={2}><button className='but'> SIGN IN </button></td></tr>
         </table>
+        <Link to="/"><button className='back'>GO BACK</button></Link>
     </div>
   )
 }

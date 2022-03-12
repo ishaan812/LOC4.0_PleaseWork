@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React,{ useState, useEffect } from 'react';
 import './signup.css';
+import { Link } from 'react-router-dom';
 
 
 const Form = () => {
@@ -50,6 +51,7 @@ const Form = () => {
             <br></br>
             <tr><td colSpan={2}><button className='but' onClick={e=>submit(e)}> SIGN UP </button></td></tr>
         </table>
+        <Link to="/"><button className='backk'>GO BACK</button></Link>
     
     </div>
   )

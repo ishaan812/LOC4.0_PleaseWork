@@ -8,7 +8,7 @@ body{
     text-align: center ;
 }
 
-.signup{
+/* .signup{
     box-sizing: border-box;
     margin:0px;
     padding: 0;
@@ -18,24 +18,24 @@ body{
     display: flex;
     flex: 1;
     
-  }
+  } */
   
   h1{
     padding-top: 20px;
     color: red;
   }
   
-  .signup{
+  /* .signup{
     padding-top: 50px;
     display: flex;
     align-items: center;
     margin: auto;
     vertical-align: middle;
     font-weight: bold;
-  }
+  } */
   
   .form{
-      /* padding: auto; */
+      
       margin: auto;
   }
 
@@ -58,3 +58,10 @@ body{
   
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
   
+
+  .backk{
+    margin-top: 50px;
+    border-radius: 5px;
+    /* flex-direction: column; */
+    align-items: center;
+  }
