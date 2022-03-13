@@ -22,6 +22,7 @@ export default function Landing() {
           </div>
           <div className="middle">
             <div className="middlewrap">
+              <img src={require('./stalkr.png')} alt="crow" />
               <div className="name">Stalkr</div>
               <div className="description">Social Media Analytics for the Ultimate<b><div className="ityped" ref={Noun}/></b></div>
             </div>

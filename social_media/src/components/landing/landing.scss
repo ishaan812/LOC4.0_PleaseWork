@@ -38,13 +38,18 @@ body{
 
     .middle{
         flex: 0.5;
-        display:flex;
+        display: flex;
         flex-direction: column ;
-        margin-top: 10%;
         background: transparent;
         .middlewrap{
-            flex: 0.7;
+            flex: 0.9;
+        img{
+            width:200px;
+            height:200px;
+            margin-bottom: -70px;
+        }
         .name{
+
             font-size: 150px;
             font-family: 'Sigmar One', cursive;
             background: transparent;
@@ -61,7 +66,7 @@ body{
             }
         }}
         .buttons{
-            flex: 0.3;
+            flex: 0.1;
             margin-top:100px;
             
             .btn{

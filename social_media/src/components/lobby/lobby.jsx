@@ -1,4 +1,4 @@
-// import axios from 'axios';
+import axios from 'axios';
 import React,{ useState} from 'react';
 import {Link} from 'react-router-dom'
 import { AiFillInstagram, AiFillFacebook } from 'react-icons/ai';
@@ -7,6 +7,7 @@ import './lobby.scss'
 const Signin = () => {
   const [InstaAuth,SetInstaAuth]=useState(false);
   const [FaceAuth,SetFaceAuth]=useState(false);
+  const [Data,SetData]=useState();
 
 
  
@@ -18,16 +19,18 @@ const Signin = () => {
 
  const FacebookAuth =(event)=>{
      event.preventDefault();
-     SetFaceAuth(true);
+     axios.get("http://localhost:5000/auth/facebook/", ) //{headers: {'Access-Control-Allow-Origin': "*"}}
+     .then(res=>{console.log(res);SetData(res.data);})
+     .catch((error) => {
+       console.log(error);
+     });
  }
   
   
   return (
     <div className='lobby'>
         <div className="left">
-            <div className="insta" onClick={event => InstagramAuth(event)}>
-                <AiFillInstagram size={300}/>
-            </div>
+            <div className="insta" onClick={event => InstagramAuth(event)}> <AiFillInstagram size={300}/></div>
             <label className="instalabel">Instagram Authenticated : {InstaAuth ? "True" : "False"} </label>
             
         </div>
