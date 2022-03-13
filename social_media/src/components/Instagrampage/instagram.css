@@ -17,6 +17,13 @@ ul{
     font-family: 'League Spartan', sans-serif;
 }
 
+.lol{
+    width:100px;
+    height:100px;
+    position: relative;
+    top: 30px;
+}
+
 /* Dropdown Button */
 .dropbtn {
     background-color: #3498DB;

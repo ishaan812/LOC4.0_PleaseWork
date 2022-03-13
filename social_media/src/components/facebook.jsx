@@ -17,7 +17,7 @@ const Facebook = () => {
     <div className="bubble x9"></div>
     <div className="bubble x10"></div>
 </div>
-    <h1 className='tips'> TIPS TO BOOST REACH </h1>
+    <h1 className='tips'> TIPS TO BOOST REACH <img src={require('./stalkr.png')} /> </h1>
     <p className='list'> BEST TIMES TO POST:
     <ul> <li>The best times to post are Wednesday at 11 am and 1 pm.</li>
     <li>The overall best day is Wednesday</li>

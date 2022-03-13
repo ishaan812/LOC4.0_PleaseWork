@@ -6,6 +6,13 @@
     font-weight: bold;
 }
 
+.lol{
+    width:100px;
+    height:100px;
+    position: relative;
+    top: 30px;
+}
+
 ul{
     text-align: center;
     list-style: inside;

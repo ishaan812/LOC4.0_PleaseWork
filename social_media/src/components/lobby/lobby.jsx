@@ -40,12 +40,9 @@ const Signin = () => {
 </div>
         <div className="left">
             <div className="insta" onClick={event => InstagramAuth(event)}> <AiFillInstagram size={300}/></div>
-            <label className="instalabel">Instagram Authenticated : {InstaAuth ? "True" : "False"} </label>
-            
         </div>
         <div className="right">
             <div className="face" onClick={event => FacebookAuth(event)}><AiFillFacebook size={300}/></div>
-            <label className="facelabel">Facebook Authenticated: {FaceAuth ? "True" : "False"} </label>
         </div>
         
         

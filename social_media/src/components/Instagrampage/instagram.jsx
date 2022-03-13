@@ -45,7 +45,7 @@ const Instagram = () => {
     <div className="bubble x9"></div>
     <div className="bubble x10"></div>
 </div>
-    <h1 className='tips'> TIPS TO BOOST REACH </h1>
+    <h1 className='tips'> TIPS TO BOOST REACH <img className="lol" src={require('./stalkr.png')}></img></h1>
     <p className='list'> BEST TIMES TO POST:
     <ul> <li>Monday: 6 am, 10 am, and 10 pm EST</li>
     <li>Tuesday: 2 am, 4 am, and  9 am EST</li>
