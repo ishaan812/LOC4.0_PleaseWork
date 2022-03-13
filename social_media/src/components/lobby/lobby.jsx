@@ -29,6 +29,18 @@ const Signin = () => {
   
   return (
     <div className='lobby'>
+      <div className="background-wrap">
+    <div className="bubble x1"></div>
+    <div className="bubble x2"></div>
+    <div className="bubble x3"></div>
+    <div className="bubble x4"></div>
+    <div className="bubble x5"></div>
+    <div className="bubble x6"></div>
+    <div className="bubble x7"></div>
+    <div className="bubble x8"></div>
+    <div className="bubble x9"></div>
+    <div className="bubble x10"></div>
+</div>
         <div className="left">
             <div className="insta" onClick={event => InstagramAuth(event)}> <AiFillInstagram size={300}/></div>
             <label className="instalabel">Instagram Authenticated : {InstaAuth ? "True" : "False"} </label>

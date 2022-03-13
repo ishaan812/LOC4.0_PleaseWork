@@ -23,7 +23,18 @@ const Form = () => {
 
   return (
     <div className='signup'>
-        
+        <div className="background-wrap">
+    <div className="bubble x1"></div>
+    <div className="bubble x2"></div>
+    <div className="bubble x3"></div>
+    <div className="bubble x4"></div>
+    <div className="bubble x5"></div>
+    <div className="bubble x6"></div>
+    <div className="bubble x7"></div>
+    <div className="bubble x8"></div>
+    <div className="bubble x9"></div>
+    <div className="bubble x10"></div>
+</div>
         <br></br>
         <table className='form'>
         <tr><td colSpan={2}><img id='image' src='https://cdn-icons-png.flaticon.com/512/149/149071.png' alt='logo'/></td></tr>
