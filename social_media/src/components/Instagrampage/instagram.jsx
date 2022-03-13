@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './instagram.css'
 
-const instagram = () => {
+const Instagram = () => {
     function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
       }
       
-      // Close the dropdown menu if the user clicks outside of it
+     
+      const [DropDownList,SetDropDownList]=useState(0);
+
+     
+     
+     
+     
       window.onclick = function(event) {
         if (!event.target.matches('.dropbtn')) {
           var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -63,4 +69,4 @@ const instagram = () => {
   )
 }
 
-export default instagram
+export default Instagram
