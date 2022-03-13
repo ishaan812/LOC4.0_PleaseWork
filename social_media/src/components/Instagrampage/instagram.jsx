@@ -6,8 +6,9 @@ const Instagram = () => {
         document.getElementById("myDropdown").classList.toggle("show");
       }
       
+      const list1 = ["Retail", "Food and Beverage", "Business, Travel and Tourism", "Healthcare", "Education", "Tech Media and Entertainment"];
      
-      const [DropDownList,SetDropDownList]=useState(0);
+      const [DropDownList,SetDropDownList]=useState("");
 
      
      
@@ -30,8 +31,8 @@ const Instagram = () => {
 
     
   return (
+      <div className="container">
       
-      <div>
           <div className="background-wrap">
     <div className="bubble x1"></div>
     <div className="bubble x2"></div>
@@ -55,18 +56,31 @@ const Instagram = () => {
     <li>Sunday: 7am, 8am, and 4pm EST </li></ul>
     </p>
     <br></br>
-    <div className="dropdown">
-  <button onclick="myFunction()" className="dropbtn">Dropdown</button>
-  <div id="myDropdown" className="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
-<br></br><br></br>
+    
     <img src={require('./post-time.jpeg')} alt="time" />
+    
+  <br/>
+  <select className='dropdown' value={DropDownList} onChange={event=>{SetDropDownList(event.target.value);console.log(event.target.value)}}>
+      <option value="Retail">Retail</option>
+      <option value="Food and Beverage">Food and Beverage</option>
+      <option value="Healthcare">Healthcare</option>
+      <option value="Education">Education</option>
+      <option value="Travel and Tourism">Travel and Tourism</option>
+      <option value="Tech Media and Entertainment">Tech Media and Entertainment</option>
+    </select>
+    {
+      DropDownList === "Retail" ? <p>Hello World!</p> :
+      (DropDownList ==="Food and Beverage" ? <p>Hello World 1</p> : 
+      (DropDownList ==="Healthcare" ? <p>Hello World 1</p> :
+      (DropDownList ==="Education" ? <p>Hello World 1</p> :
+      (DropDownList ==="Travel and Tourism" ? <p>Hello World 1</p> :
+      (DropDownList ==="Tech Media and Entertainment" ? <p>Hello World 1</p>: <p>" "</p>)))))
+    }
+    
+    
     </div>
-  )
-}
+
+    
+  )}
 
 export default Instagram
