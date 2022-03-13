@@ -14,16 +14,13 @@ const Signin = () => {
 
   const InstagramAuth = (event) => {
     event.preventDefault();
-    SetInstaAuth(true);
+    window.location.replace("http://localhost:3000/instagram");
     }
 
  const FacebookAuth =(event)=>{
      event.preventDefault();
-     axios.get("http://localhost:5000/auth/facebook/", ) //{headers: {'Access-Control-Allow-Origin': "*"}}
-     .then(res=>{console.log(res);SetData(res.data);})
-     .catch((error) => {
-       console.log(error);
-     });
+     window.location.replace("http://localhost:3000/facebook");
+     
  }
   
   
