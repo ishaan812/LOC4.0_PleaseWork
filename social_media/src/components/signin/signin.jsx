@@ -47,7 +47,7 @@ const Signin = () => {
             <br></br>
             <br></br>
             <tr><td>Password </td>
-            <td><input className='inputt' type='text' /></td>
+            <td><input className='inputt' type='password' /></td>
             </tr>
             <br></br>
             <br></br>

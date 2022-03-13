@@ -6,12 +6,7 @@
     font-weight: bold;
 }
 
-.lol{
-    width:100px;
-    height:100px;
-    position: relative;
-    top: 30px;
-}
+
 
 ul{
     text-align: center;
@@ -22,4 +17,11 @@ ul{
 .list{
     text-align: center;
     font-family: 'League Spartan', sans-serif;
+}
+
+.lol{
+    width:100px;
+    height:100px;
+    position: relative;
+    top: 30px;
 }
