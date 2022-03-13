@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './facebook.css'
 
 const Facebook = () => {
-    const [DropDownList,SetDropDownList]=useState("");
+    const [DropDownList,SetDropDownList]=useState("B2C");
   return (
     <div>
         <div className="background-wrap">
@@ -31,14 +31,23 @@ const Facebook = () => {
     <img src={require('./facebook.jpeg')} alt="time" />
 
     <br/>
-  <select className='dropdown' value={DropDownList} onChange={event=>{SetDropDownList(event.target.value);console.log(event.target.value)}}>
-      <option value="Retail">Retail</option>
-      <option value="Food and Beverage">Food and Beverage</option>
-      <option value="Healthcare">Healthcare</option>
+    <select className='dropdown' value={DropDownList} onChange={event=>{SetDropDownList(event.target.value);console.log(event.target.value)}}>
+      <option value="B2C">B2C</option>
+      <option value="B2B">B2B</option>
+      <option value="Media">Media</option>
       <option value="Education">Education</option>
-      <option value="Travel and Tourism">Travel and Tourism</option>
-      <option value="Tech Media and Entertainment">Tech Media and Entertainment</option>
+      <option value="Tech">Tech</option>
+  
     </select>
+    {
+      DropDownList === "B2C" ? <p>The best times to post on Facebook for B2C businesses are between 9–10 am, 11 am–12 noon, and 4–5 pm. These times tend to coincide with workers' breaks (or nearing the end of their workday).</p> :
+      (DropDownList ==="B2B" ? <p>The optimal time for these firms to post is around 9 am or 3–4 pm.</p> : 
+      (DropDownList ==="Media" ? <p>The most successful Facebook posts tended to coincide with tv news bulletins – 7 am, 11 am, and 6 pm.
+      </p> :
+      (DropDownList ==="Education" ? <p>higher education brands seem to find their best reach comes before class, or in breaks between lessons. The peak times for higher education are at 8 am,  noon, and 3 pm.</p> :
+      (DropDownList ==="Tech" ? <p>These businesses posted their most successful Facebook posts at 9 am, 3 pm, or 5 pm.</p>  : <p>""</p>))))
+      
+    }
     
     </div>
   )
